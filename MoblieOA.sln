@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.0.0
+MinimumVisualStudioVersion = 10.0.0.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoblieOA.Web", "MoblieOA.Web\MoblieOA.Web.csproj", "{BD5EC453-622B-4146-88A2-6FE785E09D11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileOA.API", "MobileOA.API\MobileOA.API.csproj", "{25B6E8CC-1113-4B3F-B5D9-2B2ADE373895}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileOA.Services", "MobileOA.Services\MobileOA.Services.csproj", "{8F36471A-99A4-4E17-836A-CF81CDADB115}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileOA.Models", "MobileOA.Models\MobileOA.Models.csproj", "{612B6107-36B9-4498-BA40-16F9728A376D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileOA.Data", "MobileOA.Data\MobileOA.Data.csproj", "{23BBF51F-F931-424F-92DE-9C801BF1B699}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{BC8BDA58-C710-4065-A011-5C789D6F58D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD5EC453-622B-4146-88A2-6FE785E09D11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD5EC453-622B-4146-88A2-6FE785E09D11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD5EC453-622B-4146-88A2-6FE785E09D11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD5EC453-622B-4146-88A2-6FE785E09D11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25B6E8CC-1113-4B3F-B5D9-2B2ADE373895}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25B6E8CC-1113-4B3F-B5D9-2B2ADE373895}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25B6E8CC-1113-4B3F-B5D9-2B2ADE373895}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25B6E8CC-1113-4B3F-B5D9-2B2ADE373895}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F36471A-99A4-4E17-836A-CF81CDADB115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F36471A-99A4-4E17-836A-CF81CDADB115}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F36471A-99A4-4E17-836A-CF81CDADB115}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F36471A-99A4-4E17-836A-CF81CDADB115}.Release|Any CPU.Build.0 = Release|Any CPU
+		{612B6107-36B9-4498-BA40-16F9728A376D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{612B6107-36B9-4498-BA40-16F9728A376D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{612B6107-36B9-4498-BA40-16F9728A376D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{612B6107-36B9-4498-BA40-16F9728A376D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23BBF51F-F931-424F-92DE-9C801BF1B699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23BBF51F-F931-424F-92DE-9C801BF1B699}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23BBF51F-F931-424F-92DE-9C801BF1B699}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23BBF51F-F931-424F-92DE-9C801BF1B699}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
