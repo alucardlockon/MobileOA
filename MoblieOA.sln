@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileOA.Tests", "MobileOA.Tests\MobileOA.Tests.csproj", "{1BE73E56-4DF7-415C-A467-E8CA14450F04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileOA.Common", "MobileOA.Common\MobileOA.Common.csproj", "{BED6019E-7E15-45F8-8BD3-6CD0FB1239A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{1BE73E56-4DF7-415C-A467-E8CA14450F04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BE73E56-4DF7-415C-A467-E8CA14450F04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BE73E56-4DF7-415C-A467-E8CA14450F04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BED6019E-7E15-45F8-8BD3-6CD0FB1239A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BED6019E-7E15-45F8-8BD3-6CD0FB1239A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BED6019E-7E15-45F8-8BD3-6CD0FB1239A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BED6019E-7E15-45F8-8BD3-6CD0FB1239A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

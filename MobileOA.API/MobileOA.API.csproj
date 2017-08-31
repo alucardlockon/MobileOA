@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
   </PropertyGroup>
@@ -11,6 +11,7 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.2" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MobileOA.Common\MobileOA.Common.csproj" />
     <ProjectReference Include="..\MobileOA.Data\MobileOA.Data.csproj" />
     <ProjectReference Include="..\MobileOA.Models\MobileOA.Models.csproj" />
     <ProjectReference Include="..\MobileOA.Services\MobileOA.Services.csproj" />
