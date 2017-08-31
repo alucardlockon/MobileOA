@@ -7,11 +7,17 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using MobileOA.Data.IRepositories;
+using MobileOA.Data.Repositories;
+using Newtonsoft.Json.Serialization;
 
 namespace MobileOA.API
 {
     public class Startup
     {
+        private static string _applicationPath = string.Empty;
+        string _sqlConnectionString = string.Empty;
+        
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
@@ -27,8 +33,22 @@ namespace MobileOA.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            string sqlConnectionString = Configuration.GetConnectionString("DefaultConnection");
+
+            // Repositories
+            services.AddScoped<IAccountRepository, AccountRepository>();
+
+            // Automapper Configuration
+            //AutoMapperConfiguration.Configure();
+
+            // Enable Cors
+            services.AddCors();
             // Add framework services.
-            services.AddMvc();
+            services.AddMvc().AddJsonOptions(opts =>
+            {
+                // Force Camel Case to JSON
+                opts.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            });;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

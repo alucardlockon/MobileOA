@@ -3,7 +3,13 @@
     <TargetFramework>netstandard1.4</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="IServices" />
-    <Folder Include="Services" />
+    <ProjectReference Include="..\MobileOA.Data\MobileOA.Data.csproj">
+      <Project>{23BBF51F-F931-424F-92DE-9C801BF1B699}</Project>
+      <Name>MobileOA.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MobileOA.Models\MobileOA.Models.csproj">
+      <Project>{612B6107-36B9-4498-BA40-16F9728A376D}</Project>
+      <Name>MobileOA.Models</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

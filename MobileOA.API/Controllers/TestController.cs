@@ -1,20 +1,36 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using MobileOA.Models.Entities;
+using MobileOA.Services.IServices;
+using MobileOA.Services.Services;
 
 namespace MobileOA.API.Controllers
 {
     [Route("api/[controller]")]
     public class TestController : Controller
     {
+
+        #region 请求头
+        /*
+        Response.Headers.Add("Access-Control-Allow-Headers",
+            "Origin, X-Requested-With, Content-Type, Accept,city_region_id,RegistradionID,Authorization");
+        Response.Headers.Add("Access-Control-Allow-Methods","GET, PUT, POST, DELETE, OPTIONS");
+        Response.Headers.Add("Access-Control-Allow-Origin","*");
+        */
+        #endregion
+        
+        private IAccountService _accountService;
+        
+        public TestController(IAccountService accountService)
+        {
+            _accountService = accountService;
+        }
+        
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<User> Get()
         {
-            Response.Headers.Add("Access-Control-Allow-Headers",
-                "Origin, X-Requested-With, Content-Type, Accept,city_region_id,RegistradionID,Authorization");
-            Response.Headers.Add("Access-Control-Allow-Methods","GET, PUT, POST, DELETE, OPTIONS");
-            Response.Headers.Add("Access-Control-Allow-Origin","*");
-            return new string[] {"value1", "value2"};
+            return _accountService.getUsers();
         }
 
         // GET api/values/5
