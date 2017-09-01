@@ -4,11 +4,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using MobileOA.Data.DataBaseContext;
 using MobileOA.Data.IRepositories;
 using MobileOA.Data.Repositories;
+using MobileOA.Services.IServices;
+using MobileOA.Services.Services;
 using Newtonsoft.Json.Serialization;
 
 namespace MobileOA.API
@@ -35,20 +39,21 @@ namespace MobileOA.API
         {
             string sqlConnectionString = Configuration.GetConnectionString("DefaultConnection");
 
+            services.AddDbContext<AccountContext>(options => options.UseOracle(sqlConnectionString));
+            
             // Repositories
             services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<DbContext, AccountContext>();
 
             // Automapper Configuration
             //AutoMapperConfiguration.Configure();
 
             // Enable Cors
             services.AddCors();
+            
+            
             // Add framework services.
-            services.AddMvc().AddJsonOptions(opts =>
-            {
-                // Force Camel Case to JSON
-                opts.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-            });;
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

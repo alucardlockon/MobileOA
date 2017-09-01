@@ -1,5 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using MobileOA.Data.DataBaseContext;
+using MobileOA.Data.IRepositories;
+using MobileOA.Data.Repositories;
 using MobileOA.Models.Entities;
 using MobileOA.Services.IServices;
 using MobileOA.Services.Services;
@@ -18,19 +23,30 @@ namespace MobileOA.API.Controllers
         Response.Headers.Add("Access-Control-Allow-Origin","*");
         */
         #endregion
+        //private IAccountService _accountService;
         
-        private IAccountService _accountService;
-        
-        public TestController(IAccountService accountService)
+        /*public TestController(IAccountService accountService)
         {
             _accountService = accountService;
+        }*/
+        
+        private IAccountRepository _accountRepository;
+        private AccountContext _context;
+
+        public TestController(IAccountRepository accountRepository,AccountContext context)
+        {
+            _context = context;
+            _accountRepository = accountRepository;
+            
         }
         
         // GET api/values
         [HttpGet]
         public IEnumerable<User> Get()
         {
-            return _accountService.getUsers();
+            //var result = _accountRepository.GetAll();
+            //return result;
+            return _context.Users.AsEnumerable();
         }
 
         // GET api/values/5
